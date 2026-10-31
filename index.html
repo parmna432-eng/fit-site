@@ -1,0 +1,1044 @@
+<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style></head><body>
+<title>وكالة فت FIT</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..900&family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=Reem+Kufi:wght@500;700&display=swap">
+<style>
+/* Layout: شريط قياس الخياط يقطع الواجهة، ثم شبكة منتجات بفلاتر وسلة جانبية، ثم «من نحن» وتواصل على شريط كوبالت */
+:root {
+  --bg: #f4f5f9;
+  --surface: #ffffff;
+  --ink: #12162b;
+  --muted: #5a5f78;
+  --line: #dfe2ec;
+  --cobalt: #2338c4;
+  --cobalt-ink: #ffffff;
+  --saffron: #ffb21a;
+  --saffron-ink: #1b1400;
+  --tint-1: #e3e7fb;
+  --tint-2: #fbe6dc;
+  --tint-3: #fff1cc;
+  --tint-4: #dcf1ea;
+  --shape: #12162b;
+  --scrim: rgba(10, 12, 30, .45);
+  --danger: #c2321f;
+  --f-display: "Reem Kufi", "IBM Plex Sans Arabic", "Segoe UI", Tahoma, sans-serif;
+  --f-body: "IBM Plex Sans Arabic", "Segoe UI", Tahoma, sans-serif;
+  --f-latin: "Archivo", "Arial Black", "Helvetica Neue", Arial, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0d0f1c; --surface: #161a2e; --ink: #eef0f8; --muted: #a2a7c2; --line: #2a2f4a;
+    --cobalt: #5b6dff; --cobalt-ink: #0a0d22; --saffron: #ffbf3d; --saffron-ink: #1b1400;
+    --tint-1: #1f2650; --tint-2: #3a2621; --tint-3: #3a3018; --tint-4: #173229; --shape: #eef0f8;
+    --scrim: rgba(0, 0, 0, .6); --danger: #ff7a66;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0d0f1c; --surface: #161a2e; --ink: #eef0f8; --muted: #a2a7c2; --line: #2a2f4a;
+  --cobalt: #5b6dff; --cobalt-ink: #0a0d22; --saffron: #ffbf3d; --saffron-ink: #1b1400;
+  --tint-1: #1f2650; --tint-2: #3a2621; --tint-3: #3a3018; --tint-4: #173229; --shape: #eef0f8;
+  --scrim: rgba(0, 0, 0, .6); --danger: #ff7a66;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; animation: none !important; } }
+body { direction: rtl; background: var(--bg); color: var(--ink); font-family: var(--f-body); font-size: 16px; line-height: 1.7; }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--surface); }
+body.locked { overflow: hidden; }
+a { color: inherit; }
+:focus-visible { outline: 3px solid var(--saffron); outline-offset: 3px; border-radius: 6px; }
+h1, h2, h3 { font-family: var(--f-display); text-wrap: balance; line-height: 1.25; margin: 0; }
+.wrap { max-width: 1160px; margin-inline: auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.latin { font-family: var(--f-latin); direction: ltr; unicode-bidi: isolate; }
+.eyebrow { font-size: 13px; font-weight: 600; letter-spacing: .04em; color: var(--cobalt); }
+
+/* Header */
+.top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--surface); border-bottom: 1px solid var(--line); }
+.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 12px; }
+.brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.brand .mark { font-family: var(--f-latin); font-weight: 900; font-stretch: 125%; font-size: 24px; letter-spacing: -.02em; color: var(--cobalt); line-height: 1; }
+.brand .ar { font-family: var(--f-display); font-weight: 700; font-size: 18px; }
+.nav { display: flex; gap: 22px; font-weight: 500; font-size: 15px; }
+.nav a { text-decoration: none; color: var(--muted); }
+.nav a:hover { color: var(--ink); }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; border: 0; cursor: pointer; text-decoration: none; font: 600 15px/1 var(--f-body); padding: 13px 20px; border-radius: 999px; }
+.btn-primary { background: var(--cobalt); color: var(--cobalt-ink); }
+.btn-primary:hover { filter: brightness(1.1); }
+.btn-ghost { background: transparent; color: var(--ink); box-shadow: inset 0 0 0 1.5px var(--ink); }
+.btn-small { padding: 10px 16px; font-size: 14px; }
+.btn[aria-disabled="true"] { opacity: .45; pointer-events: none; }
+.cart-btn { position: relative; }
+.cart-btn svg { width: 18px; height: 18px; }
+.badge { background: var(--saffron); color: var(--saffron-ink); font: 800 12px/1 var(--f-latin); min-width: 22px; height: 22px; padding-inline: 6px; border-radius: 999px; display: inline-grid; place-items: center; font-variant-numeric: tabular-nums; }
+@media (max-width: 760px) { .nav { display: none; } }
+
+/* Hero */
+.hero { padding-block: 56px 0; overflow: hidden; }
+.hero-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: 40px; align-items: end; }
+.hero h1 { font-size: clamp(34px, 5.4vw, 60px); font-weight: 700; }
+.hero h1 em { font-style: normal; color: var(--cobalt); }
+.hero p.lede { color: var(--muted); font-size: 18px; max-width: 34em; margin: 18px 0 28px; }
+.hero .ctas { display: flex; flex-wrap: wrap; gap: 12px; }
+.wordmark { font-family: var(--f-latin); font-weight: 900; font-stretch: 125%; font-size: clamp(120px, 22vw, 260px); line-height: .78; letter-spacing: -.04em; color: var(--cobalt); text-align: left; direction: ltr; margin: 0; user-select: none; }
+.wordmark span { color: var(--saffron); }
+.facts { display: flex; flex-wrap: wrap; gap: 28px; margin-top: 36px; }
+.facts div { display: grid; }
+.facts b { font-family: var(--f-latin); font-size: 26px; font-weight: 800; font-variant-numeric: tabular-nums; }
+.facts small { color: var(--muted); font-size: 13px; }
+@media (max-width: 860px) { .hero-grid { grid-template-columns: 1fr; } .wordmark { order: -1; text-align: right; } }
+
+/* Measuring tape */
+.tape { margin-top: 48px; background: var(--saffron); color: var(--saffron-ink); height: 54px; position: relative; transform: rotate(-1.2deg); margin-inline: -20px; box-shadow: 0 6px 0 rgba(0,0,0,.06); }
+.tape::before { content: ""; position: absolute; inset: 0 0 auto; height: 18px;
+  background:
+    repeating-linear-gradient(to left, currentColor 0 1.5px, transparent 1.5px 50px),
+    repeating-linear-gradient(to left, currentColor 0 1px, transparent 1px 10px);
+  background-size: 100% 18px, 100% 9px; background-repeat: no-repeat; opacity: .75; }
+.tape .nums { position: absolute; inset: 20px 0 0; display: flex; overflow: hidden; direction: ltr; font: 700 13px/1 var(--f-latin); font-variant-numeric: tabular-nums; }
+.tape .nums span { flex: 0 0 50px; padding-left: 3px; }
+.tape .label { position: absolute; left: 50%; top: 22px; transform: translateX(-50%); background: var(--saffron); padding-inline: 14px; font: 700 13px/1.3 var(--f-body); white-space: nowrap; }
+
+/* Sections */
+section { padding-block: 72px; }
+.sec-head { display: grid; gap: 18px; margin-bottom: 28px; }
+.sec-head h2 { font-size: clamp(28px, 3.6vw, 40px); margin-top: 4px; }
+.filters { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { border: 1.5px solid var(--line); background: var(--surface); color: var(--ink); padding: 8px 16px; border-radius: 999px; font: 500 15px/1.2 var(--f-body); cursor: pointer; }
+.chip:hover { border-color: var(--ink); }
+.chip[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 20px; }
+.card { background: var(--surface); border-radius: 14px; overflow: hidden; display: flex; flex-direction: column; border: 1px solid var(--line); }
+.ph { aspect-ratio: 4 / 4.2; max-width: 100%; position: relative; display: grid; place-items: center; }
+.ph svg { width: 52%; height: auto; color: var(--shape); opacity: .85; }
+.ph .tag { position: absolute; top: 12px; right: 12px; background: var(--surface); font-size: 12px; font-weight: 600; padding: 3px 10px; border-radius: 999px; }
+.ph .new { position: absolute; top: 12px; left: 12px; background: var(--saffron); color: var(--saffron-ink); font: 800 11px/1 var(--f-latin); padding: 5px 8px; border-radius: 4px; letter-spacing: .06em; }
+.ph.t1 { background: var(--tint-1); } .ph.t2 { background: var(--tint-2); } .ph.t3 { background: var(--tint-3); } .ph.t4 { background: var(--tint-4); }
+.card-body { padding: 16px 16px 18px; display: grid; gap: 10px; flex: 1; align-content: start; }
+.card h3 { font-family: var(--f-body); font-size: 17px; font-weight: 600; }
+.size-label { font-size: 12px; color: var(--muted); }
+.size-label.warn { color: var(--danger); font-weight: 600; }
+.sizes { display: flex; flex-wrap: wrap; gap: 6px; }
+.sizes button { font: 600 12px/1 var(--f-latin); border: 1.5px solid var(--line); background: transparent; color: var(--ink); padding: 7px 9px; border-radius: 6px; min-width: 34px; cursor: pointer; }
+.sizes button:hover { border-color: var(--ink); }
+.sizes button[aria-pressed="true"] { background: var(--cobalt); border-color: var(--cobalt); color: var(--cobalt-ink); }
+.card-foot { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-top: 4px; }
+.price { font: 800 20px/1 var(--f-latin); font-variant-numeric: tabular-nums; }
+.price small { font: 500 13px var(--f-body); color: var(--muted); margin-right: 4px; }
+.add { padding: 10px 14px; font-size: 14px; }
+
+/* About */
+.about { background: var(--surface); border-block: 1px solid var(--line); }
+.about-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 48px; }
+.about p { color: var(--muted); max-width: 60ch; margin: 16px 0 0; }
+.values { display: grid; gap: 0; }
+.values div { display: grid; grid-template-columns: 72px 1fr; gap: 16px; padding-block: 18px; border-top: 1px solid var(--line); }
+.values div:last-child { border-bottom: 1px solid var(--line); }
+.values b { font: 800 15px/1.6 var(--f-latin); color: var(--cobalt); direction: ltr; text-align: right; }
+.values h3 { font-size: 19px; }
+.values p { margin-top: 4px; font-size: 15px; }
+@media (max-width: 860px) { .about-grid { grid-template-columns: 1fr; gap: 28px; } }
+
+/* Contact */
+.contact { background: var(--cobalt); color: var(--cobalt-ink); }
+.contact .eyebrow { color: var(--saffron); }
+.contact h2 { color: var(--cobalt-ink); }
+.contact-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 28px; }
+.c-card { background: var(--surface); color: var(--ink); border-radius: 14px; padding: 22px; display: grid; gap: 10px; align-content: start; min-width: 0; }
+.c-card h3 { font-size: 18px; }
+.c-card .val { font: 700 19px/1.4 var(--f-latin); direction: ltr; text-align: right; word-break: break-word; user-select: all; }
+.c-card .val.ar { font-family: var(--f-body); direction: rtl; font-weight: 600; font-size: 16px; user-select: text; }
+.c-card .row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
+.c-card .note { color: var(--muted); font-size: 13px; }
+.placeholder-flag { display: inline-block; font-size: 11px; font-weight: 600; background: var(--tint-3); color: var(--ink); padding: 2px 8px; border-radius: 4px; justify-self: start; }
+@media (max-width: 860px) { .contact-grid { grid-template-columns: 1fr; } }
+
+footer { background: var(--bg); padding-block: 28px; font-size: 14px; color: var(--muted); }
+footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; }
+
+/* Cart drawer */
+.scrim { position: fixed; inset: 0; background: var(--scrim); z-index: 20; }
+.drawer { position: fixed; top: 0; bottom: 0; left: 0; z-index: 21; width: min(420px, 100%); background: var(--surface); color: var(--ink); display: flex; flex-direction: column; box-shadow: 0 0 40px rgba(0,0,0,.25);
+  padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px); padding-left: env(safe-area-inset-left, 0px); }
+.drawer-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 18px 20px; border-bottom: 1px solid var(--line); }
+.drawer-head h2 { font-size: 22px; }
+.icon-btn { border: 0; background: transparent; color: var(--ink); width: 40px; height: 40px; border-radius: 999px; cursor: pointer; font-size: 22px; line-height: 1; }
+.icon-btn:hover { background: var(--bg); }
+.drawer-body { flex: 1; overflow-y: auto; padding: 8px 20px 20px; }
+.empty { text-align: center; color: var(--muted); padding-block: 48px; display: grid; gap: 14px; justify-items: center; }
+.line { display: grid; grid-template-columns: 56px 1fr auto; gap: 12px; align-items: center; padding-block: 14px; border-bottom: 1px solid var(--line); }
+.line .thumb { width: 56px; height: 56px; border-radius: 10px; display: grid; place-items: center; }
+.line .thumb svg { width: 60%; color: var(--shape); }
+.line .meta { min-width: 0; display: grid; gap: 2px; }
+.line .meta b { font-weight: 600; font-size: 15px; }
+.line .meta span { color: var(--muted); font-size: 13px; }
+.line .meta .lp { font: 700 14px var(--f-latin); color: var(--ink); font-variant-numeric: tabular-nums; }
+.qty { display: flex; align-items: center; gap: 4px; direction: ltr; }
+.qty button { width: 30px; height: 30px; border-radius: 8px; border: 1.5px solid var(--line); background: transparent; color: var(--ink); cursor: pointer; font: 700 16px/1 var(--f-latin); }
+.qty button:hover { border-color: var(--ink); }
+.qty output { min-width: 22px; text-align: center; font: 700 15px var(--f-latin); font-variant-numeric: tabular-nums; }
+.remove { grid-column: 2 / 4; justify-self: start; border: 0; background: none; color: var(--danger); font: 500 13px var(--f-body); cursor: pointer; padding: 0; }
+.fields { display: grid; gap: 12px; margin-top: 20px; }
+.fields label { display: grid; gap: 4px; font-size: 14px; font-weight: 600; }
+.fields label span { font-weight: 400; color: var(--muted); font-size: 12px; }
+.fields input, .fields textarea { font: 400 15px/1.5 var(--f-body); color: var(--ink); background: var(--bg); border: 1.5px solid var(--line); border-radius: 10px; padding: 10px 12px; width: 100%; }
+.fields textarea { resize: vertical; min-height: 64px; }
+.fields input:focus, .fields textarea:focus { outline: none; border-color: var(--cobalt); }
+.drawer-foot { border-top: 1px solid var(--line); padding: 16px 20px 20px; display: grid; gap: 12px; }
+.total { display: flex; justify-content: space-between; align-items: baseline; font-weight: 600; }
+.total .latin { font-size: 24px; font-weight: 800; font-variant-numeric: tabular-nums; }
+.total small { color: var(--muted); font-weight: 500; }
+.foot-note { font-size: 12px; color: var(--muted); margin: 0; }
+.sent { background: var(--tint-4); border-radius: 10px; padding: 12px 14px; font-size: 14px; display: grid; gap: 10px; }
+.sent .row { display: flex; flex-wrap: wrap; gap: 8px; }
+
+/* Account */
+.top-actions { display: flex; align-items: center; gap: 8px; }
+.acct-btn img { width: 22px; height: 22px; border-radius: 999px; }
+.acct-btn img[hidden] { display: none; }
+.acct-hello { display: flex; align-items: center; gap: 14px; padding-block: 18px; border-bottom: 1px solid var(--line); }
+.acct-hello img { width: 52px; height: 52px; border-radius: 999px; background: var(--bg); }
+.acct-hello b { display: block; font-family: var(--f-display); font-size: 20px; }
+.acct-hello span { color: var(--muted); font-size: 13px; }
+.acct-note { background: var(--tint-1); border-radius: 10px; padding: 12px 14px; font-size: 14px; margin-top: 16px; }
+.acct-status { font-size: 13px; color: var(--muted); min-height: 1.5em; }
+/* Login form adapted from bedimcode/animated-login-form (https://github.com/bedimcode/animated-login-form)
+   MIT License, Copyright (c) 2023 Bedimcode. Permission is hereby granted, free of charge, to any person obtaining a copy
+   of this software and associated documentation files, to deal in the Software without restriction, subject to including
+   this notice. THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.
+   Changes: RTL, FIT colors and fonts, inline SVG icons instead of Remix Icon, register / login / reset views wired to Supabase Auth. */
+.login { --lg-fg: #ffffff; margin-top: 16px; border-radius: 18px; padding: 28px 16px 20px; position: relative; overflow: hidden; color: var(--lg-fg);
+  background:
+    repeating-linear-gradient(-35deg, rgba(255,255,255,.07) 0 2px, transparent 2px 22px),
+    radial-gradient(circle at 85% 10%, var(--saffron) 0 70px, transparent 71px),
+    linear-gradient(160deg, #2338c4, #121a66); }
+.login__form { position: relative; background-color: rgba(255,255,255,.08); border: 2px solid var(--lg-fg); padding: 2rem 1.25rem 1.5rem; border-radius: 1rem; backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+.login__brand { text-align: center; font: 700 13px var(--f-display); opacity: .85; }
+.login__brand .latin { font-weight: 900; font-stretch: 125%; }
+.login__title { text-align: center; font-size: 1.6rem; font-weight: 700; margin: 4px 0 1.75rem; color: var(--lg-fg); }
+.login__content, .login__box { display: grid; }
+.login__content { row-gap: 1.75rem; margin-bottom: 1.25rem; }
+.login__box { grid-template-columns: max-content 1fr; align-items: center; column-gap: .75rem; border-bottom: 2px solid var(--lg-fg); }
+.login__icon { width: 20px; height: 20px; }
+.login__box-input { position: relative; }
+.login__input { width: 100%; padding-block: .8rem; background: none; border: 0; outline: none; color: var(--lg-fg); font: 500 16px var(--f-body); position: relative; z-index: 1; text-align: right; }
+.login__input.latin { font-family: var(--f-latin); direction: ltr; text-align: right; }
+.login__label { position: absolute; right: 0; top: 13px; font-weight: 500; font-size: 15px; transition: top .3s, font-size .3s; pointer-events: none; }
+.login__input:focus + .login__label,
+.login__input:not(:placeholder-shown) + .login__label { top: -12px; font-size: 12px; }
+.login__box:focus-within { border-bottom-color: var(--saffron); }
+.login__check, .login__check-group { display: flex; align-items: center; justify-content: space-between; }
+.login__check { margin-bottom: 1rem; }
+.login__check-group { column-gap: .5rem; }
+.login__check-input { width: 16px; height: 16px; accent-color: var(--saffron); }
+.login__check-label, .login__register { font-size: 13px; }
+.login__error { min-height: 1.4em; margin: 0 0 .5rem; font-size: 13px; font-weight: 600; color: #ffd27a; }
+.login__button { width: 100%; padding: 1rem; border-radius: .5rem; border: 0; background-color: var(--lg-fg); color: #121a66; font: 700 16px var(--f-body); cursor: pointer; margin-bottom: 1.25rem; }
+.login__button:hover { background-color: var(--saffron); color: var(--saffron-ink); }
+.login__register { text-align: center; margin: 0; opacity: .9; }
+.login__foot { position: relative; margin: 16px 0 0; font-size: 13px; opacity: .85; text-align: center; }
+@media (prefers-reduced-motion: reduce) { .login__label { transition: none; } }
+.auth-tabs { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; background: rgba(255,255,255,.12); border-radius: 999px; padding: 4px; margin: 14px 0 6px; }
+.auth-tabs button { border: 0; background: transparent; color: var(--lg-fg); font: 600 14px var(--f-body); padding: 9px 8px; border-radius: 999px; cursor: pointer; }
+.auth-tabs button[aria-selected="true"] { background: var(--lg-fg); color: #121a66; }
+.link-btn { border: 0; background: none; padding: 0; color: var(--lg-fg); font: 600 13px var(--f-body); text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
+.link-btn:hover { color: var(--saffron); }
+.login__eye { position: absolute; left: 0; top: 10px; z-index: 2; width: 30px; height: 30px; border: 0; cursor: pointer; background: transparent; color: var(--lg-fg);
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round'%3E%3Cpath d='M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z'/%3E%3Ccircle cx='12' cy='12' r='3'/%3E%3Cpath d='M3 3l18 18'/%3E%3C/svg%3E") center / 20px no-repeat;
+          mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round'%3E%3Cpath d='M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z'/%3E%3Ccircle cx='12' cy='12' r='3'/%3E%3Cpath d='M3 3l18 18'/%3E%3C/svg%3E") center / 20px no-repeat;
+  background-color: var(--lg-fg); }
+.login__eye.on {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round'%3E%3Cpath d='M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z'/%3E%3Ccircle cx='12' cy='12' r='3'/%3E%3C/svg%3E");
+          mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round'%3E%3Cpath d='M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z'/%3E%3Ccircle cx='12' cy='12' r='3'/%3E%3C/svg%3E"); }
+.login__input.pass { padding-left: 34px; }
+.login__error.ok { color: #b9f3d6; }
+.auth-off, .auth-text { font-size: 14px; line-height: 1.7; margin: 10px 0 18px; }
+.auth-off { background: rgba(255,255,255,.14); border-radius: 10px; padding: 10px 12px; }
+.acct-initial { width: 52px; height: 52px; border-radius: 999px; background: var(--cobalt); color: var(--cobalt-ink); display: grid; place-items: center; font: 800 22px var(--f-latin); flex: none; }
+.acct-hello span.latin { direction: ltr; display: block; text-align: right; }
+.acct-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+@media (max-width: 480px) { .acct-btn .acct-label { display: none; } }
+
+.toast { position: fixed; z-index: 30; bottom: calc(20px + env(safe-area-inset-bottom, 0px)); left: 50%; transform: translateX(-50%); background: var(--ink); color: var(--bg); padding: 12px 18px; border-radius: 999px; font-weight: 600; font-size: 14px; display: flex; gap: 12px; align-items: center; max-width: calc(100% - 32px); }
+.toast button { background: none; border: 0; color: var(--saffron); font: 700 14px var(--f-body); cursor: pointer; padding: 0; }
+</style>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="g-shirt" viewBox="0 0 100 100"><path fill="currentColor" d="M35 10 L50 18 L65 10 L88 22 L80 40 L70 36 L70 90 L30 90 L30 36 L20 40 L12 22 Z"/><path fill="var(--bg)" opacity=".5" d="M47 22h6v60h-6z"/></symbol>
+    <symbol id="g-pants" viewBox="0 0 100 100"><path fill="currentColor" d="M28 8 H72 L78 92 H58 L50 36 L42 92 H22 Z"/></symbol>
+    <symbol id="g-jacket" viewBox="0 0 100 100"><path fill="currentColor" d="M34 8 L50 20 L66 8 L86 18 L92 70 L78 72 L76 40 L74 92 L26 92 L24 40 L22 72 L8 70 L14 18 Z"/><path fill="var(--bg)" opacity=".5" d="M48 22h4v70h-4z"/></symbol>
+    <symbol id="g-tee" viewBox="0 0 100 100"><path fill="currentColor" d="M36 14 Q50 24 64 14 L88 26 L80 44 L70 40 L70 88 L30 88 L30 40 L20 44 L12 26 Z"/></symbol>
+    <symbol id="g-hoodie" viewBox="0 0 100 100"><path fill="currentColor" d="M38 18 Q50 0 62 18 L86 28 L92 76 L78 78 L72 46 L72 90 L28 90 L28 46 L22 78 L8 76 L14 28 Z"/><path fill="var(--bg)" opacity=".5" d="M38 66h24v10H38z"/></symbol>
+    <symbol id="g-shoe" viewBox="0 0 100 100"><path fill="currentColor" d="M10 40 L30 40 L38 52 Q60 54 80 60 Q92 64 92 74 L92 80 L10 80 Z"/><path fill="var(--bg)" opacity=".5" d="M10 74h82v6H10z"/></symbol>
+    <symbol id="g-suit" viewBox="0 0 100 100"><path fill="currentColor" d="M34 8 L50 30 L66 8 L86 18 L92 70 L78 72 L76 40 L74 92 L26 92 L24 40 L22 72 L8 70 L14 18 Z"/><path fill="var(--bg)" opacity=".6" d="M42 8 L50 30 L58 8 Z"/><path fill="currentColor" d="M47 12 L53 12 L52 34 L50 38 L48 34 Z"/></symbol>
+  </defs>
+</svg>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#home" aria-label="وكالة فت، الرئيسية">
+      <span class="mark latin">FIT</span><span class="ar">وكالة فت</span>
+    </a>
+    <nav class="nav" aria-label="أقسام الموقع">
+      <a href="#products">الأقسام</a>
+      <a href="#about">من نحن</a>
+      <a href="#contact">تواصل</a>
+    </nav>
+    <div class="top-actions">
+      <button class="btn btn-ghost btn-small acct-btn" id="openAcct" type="button">
+        <span class="acct-label" id="acctLabel">تسجيل الدخول</span>
+      </button>
+      <button class="btn btn-primary btn-small cart-btn" id="openCart" type="button" aria-label="افتح السلة">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 7h12l-1 13H7L6 7z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg>
+        السلة <span class="badge" id="cartCount">0</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="home">
+  <div class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow">جاكيتات · تراك سوت · أحذية · قمصان · بناطير · كاجول · بدلات</div>
+        <h1>لبسك يجي على <em>قياسك</em>،<br>وستايلك يبقى إلك.</h1>
+        <p class="lede">وكالة فت تجيب لك تشكيلات مختارة بخامات زينة وأسعار واضحة بالدينار العراقي. اختار القطعة والقياس، ضيفها للسلة، وأكّد طلبك عالواتساب.</p>
+        <div class="ctas">
+          <a class="btn btn-primary" href="#products">تصفّح الأقسام</a>
+          <a class="btn btn-ghost" href="#contact">موقع المحل</a>
+        </div>
+        <div class="facts">
+          <div><b class="latin">7</b><small>أقسام</small></div>
+          <div><b class="latin">S–3XL</b><small>قياسات متوفرة</small></div>
+          <div><b class="latin">24h</b><small>توصيل داخل المدينة</small></div>
+        </div>
+      </div>
+      <p class="wordmark" aria-hidden="true">FIT<span>.</span></p>
+    </div>
+    <div class="tape" aria-hidden="true">
+      <div class="nums" id="tapeNums"></div>
+      <div class="label">كل قطعة نقيسها قبل لا توصلك</div>
+    </div>
+  </div>
+
+  <section id="products">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <div class="eyebrow">الأقسام</div>
+          <h2>اختار القسم، والقياس، وضيف للسلة</h2>
+        </div>
+        <div class="filters" id="filters" role="group" aria-label="تصفية حسب القسم"></div>
+      </div>
+      <div class="grid" id="grid"></div>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <div class="wrap about-grid">
+      <div>
+        <div class="eyebrow">من نحن</div>
+        <h2>وكالة عراقية تهتم بالقياس قبل الموضة</h2>
+        <p>بدينا «فت» لأن أغلب الناس تشتري قطعة حلوة وتطلع مو على قياسها. نختار الموديلات بنفسنا، نفحص الخياطة والقماش، ونرسل لك جدول القياسات قبل الطلب حتى توصلك القطعة مضبوطة من أول مرة.</p>
+        <p>عدنا جاكيتات وتراك سوت وأحذية وقمصان وبناطير وكاجول وبدلات رسمية، وكلها بأسعار ثابتة ومعلنة.</p>
+      </div>
+      <div class="values">
+        <div><b>01 cm</b><div><h3>القياس أولاً</h3><p>نرسل لك جدول قياسات لكل قطعة، ونساعدك تختار القياس الصح قبل الدفع.</p></div></div>
+        <div><b>100%</b><div><h3>خامات مفحوصة</h3><p>كل قطعة تنفحص بالمحل قبل التغليف: الخياطة، السحّاب، واللون.</p></div></div>
+        <div><b>7 days</b><div><h3>تبديل خلال أسبوع</h3><p>إذا القياس ما ضبط، تبدّل القطعة خلال 7 أيام من الاستلام.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <div class="eyebrow">تواصل</div>
+      <h2>راسلنا أو زورنا بالمحل</h2>
+      <div class="contact-grid">
+        <div class="c-card">
+          <h3>واتساب</h3>
+          <div class="val" id="waNum">+964 770 000 0000</div>
+          <span class="placeholder-flag">رقم مؤقت</span>
+          
+          <div class="row">
+            <a class="btn btn-primary btn-small" href="https://wa.me/9647700000000" target="_blank" rel="noopener">افتح المحادثة</a>
+            <button class="btn btn-ghost btn-small" id="copyWa" type="button">انسخ الرقم</button>
+          </div>
+        </div>
+        <div class="c-card">
+          <h3>إنستغرام</h3>
+          <div class="val">@fit.agency.iq</div>
+          <span class="placeholder-flag">حساب مؤقت</span>
+          <div class="row">
+            <a class="btn btn-primary btn-small" href="https://instagram.com/fit.agency.iq" target="_blank" rel="noopener">تابعنا</a>
+          </div>
+          <div class="note">نشر التشكيلات الجديدة كل أسبوع.</div>
+        </div>
+        <div class="c-card">
+          <h3>موقع المحل</h3>
+          <div class="val ar">بغداد، المنصور، شارع 14 رمضان، قرب الساحة</div>
+          <span class="placeholder-flag">عنوان مؤقت</span>
+          <div class="row">
+            <a class="btn btn-primary btn-small" href="https://maps.google.com/?q=Al+Mansour+Baghdad" target="_blank" rel="noopener">افتح بالخريطة</a>
+          </div>
+          <div class="note">الدوام: يومياً 10 الصبح إلى 10 بالليل، الجمعة من 4 العصر.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span><span class="latin" style="font-weight:800">FIT</span> · وكالة فت للملابس</span>
+    <span>الأسعار بالدينار العراقي وتشمل التغليف</span>
+  </div>
+</footer>
+
+<div class="scrim" id="scrim" hidden></div>
+<aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="cartTitle" hidden>
+  <div class="drawer-head">
+    <h2 id="cartTitle">سلّتك</h2>
+    <button class="icon-btn" id="closeCart" type="button" aria-label="سكّر السلة">×</button>
+  </div>
+  <div class="drawer-body">
+    <div id="lines"></div>
+    <div class="fields" id="fields">
+      <label for="custName">الاسم <span>اختياري، يوصل ويا الطلب</span><input id="custName" type="text" autocomplete="name" placeholder="مثلاً: علي حسن"></label>
+      <label for="custAddr">العنوان <span>المحافظة والمنطقة وأقرب نقطة دالة</span><textarea id="custAddr" rows="2" placeholder="مثلاً: بغداد، الكرادة، قرب ساحة كهرمانة"></textarea></label>
+    </div>
+  </div>
+  <div class="drawer-foot" id="foot">
+    <div class="total"><span>المجموع <small id="itemsLabel"></small></span><span><span class="latin" id="totalVal">0</span> د.ع</span></div>
+    <a class="btn btn-primary" id="confirmBtn" href="#" target="_blank" rel="noopener">أكّد الطلب وكمّل عالواتساب</a>
+    <p class="foot-note">ينفتح الواتساب برسالة جاهزة فيها الطلب كامل. اضغط إرسال هناك حتى يوصلنا.</p>
+    <div class="sent" id="sentBox" hidden>
+      <div>إذا انفتح الواتساب وأرسلت الرسالة، تگدر تفرّغ السلة. إذا ما انفتح، انسخ الطلب وأرسله على <span class="latin">+964 770 000 0000</span>.</div>
+      <div class="row">
+        <button class="btn btn-ghost btn-small" id="copyOrder" type="button">انسخ الطلب</button>
+        <button class="btn btn-ghost btn-small" id="clearCart" type="button">فرّغ السلة</button>
+      </div>
+    </div>
+  </div>
+</aside>
+
+<aside class="drawer" id="acct" role="dialog" aria-modal="true" aria-labelledby="acctTitle" hidden>
+  <div class="drawer-head">
+    <h2 id="acctTitle">حسابي</h2>
+    <button class="icon-btn" id="closeAcct" type="button" aria-label="سكّر الحساب">×</button>
+  </div>
+  <div class="drawer-body">
+    <div id="acctIn" hidden>
+      <div class="acct-hello">
+        <div class="acct-initial" id="acctInitial" aria-hidden="true">F</div>
+        <div><b id="acctName">هلا بيك</b><span class="latin" id="acctEmail"></span></div>
+      </div>
+      <div class="fields">
+        <label for="pName">الاسم<input id="pName" type="text" autocomplete="name" maxlength="60"></label>
+        <label for="pAddr">العنوان <span>ينكتب بالطلب لحاله</span><textarea id="pAddr" rows="2" placeholder="المحافظة والمنطقة وأقرب نقطة دالة"></textarea></label>
+      </div>
+      <div class="acct-status" id="acctStatus" role="status"></div>
+      <div class="acct-note">سلّتك وعنوانك محفوظة بحسابك، وتلگاها إذا سجّلت دخول من أي جهاز.</div>
+      <div class="acct-actions">
+        <button class="btn btn-ghost btn-small" id="changePassBtn" type="button">غيّر كلمة السر</button>
+        <button class="btn btn-ghost btn-small" id="logoutBtn" type="button">تسجيل الخروج</button>
+      </div>
+    </div>
+
+    <div id="acctOut" class="login">
+      <div class="login__form">
+        <div class="login__brand"><span class="latin">FIT</span> وكالة فت</div>
+
+        <div class="auth-tabs" id="authTabs" role="tablist" aria-label="نوع الدخول">
+          <button type="button" role="tab" id="tab-reg" aria-selected="true" data-view="regForm">إنشاء حساب</button>
+          <button type="button" role="tab" id="tab-login" aria-selected="false" data-view="loginForm">تسجيل دخول</button>
+        </div>
+
+        <p class="auth-off" id="authOff" hidden>الحسابات تشتغل بالنسخة المنشورة من الموقع (بعد ربطه بـ Firebase). هنا تگدر تطلب بدون حساب.</p>
+
+        <form id="regForm" novalidate>
+          <h3 class="login__title">حساب جديد</h3>
+          <div class="login__content">
+            <div class="login__box">
+              <svg class="login__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>
+              <div class="login__box-input"><input type="text" required class="login__input" id="reg-name" placeholder=" " autocomplete="name" maxlength="60"><label for="reg-name" class="login__label">الاسم</label></div>
+            </div>
+            <div class="login__box">
+              <svg class="login__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+              <div class="login__box-input"><input type="email" required class="login__input latin" id="reg-email" placeholder=" " autocomplete="email" maxlength="120"><label for="reg-email" class="login__label">الإيميل</label></div>
+            </div>
+            <div class="login__box">
+              <svg class="login__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+              <div class="login__box-input"><input type="password" required class="login__input latin pass" id="reg-pass" placeholder=" " autocomplete="new-password" minlength="8"><label for="reg-pass" class="login__label">كلمة السر (8 أحرف أو أكثر)</label><button type="button" class="login__eye" data-eye="reg-pass" aria-label="اظهر كلمة السر"></button></div>
+            </div>
+            <div class="login__box">
+              <svg class="login__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/><path d="m9 16 2 2 4-4"/></svg>
+              <div class="login__box-input"><input type="password" required class="login__input latin pass" id="reg-pass2" placeholder=" " autocomplete="new-password"><label for="reg-pass2" class="login__label">أعد كلمة السر</label></div>
+            </div>
+          </div>
+          <p class="login__error" id="regError" role="alert"></p>
+          <button type="submit" class="login__button">إنشاء حساب</button>
+          <p class="login__register">عندك حساب؟ <button type="button" class="link-btn" data-go="loginForm">سجّل دخول</button></p>
+        </form>
+
+        <form id="loginForm" novalidate hidden>
+          <h3 class="login__title">تسجيل الدخول</h3>
+          <div class="login__content">
+            <div class="login__box">
+              <svg class="login__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+              <div class="login__box-input"><input type="email" required class="login__input latin" id="login-email" placeholder=" " autocomplete="email" maxlength="120"><label for="login-email" class="login__label">الإيميل</label></div>
+            </div>
+            <div class="login__box">
+              <svg class="login__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+              <div class="login__box-input"><input type="password" required class="login__input latin pass" id="login-pass" placeholder=" " autocomplete="current-password"><label for="login-pass" class="login__label">كلمة السر</label><button type="button" class="login__eye" data-eye="login-pass" aria-label="اظهر كلمة السر"></button></div>
+            </div>
+          </div>
+          <div class="login__check"><button type="button" class="link-btn" data-go="resetForm">نسيت كلمة السر؟</button></div>
+          <p class="login__error" id="loginError" role="alert"></p>
+          <button type="submit" class="login__button">دخول</button>
+          <p class="login__register">ما عندك حساب؟ <button type="button" class="link-btn" data-go="regForm">أنشئ حساب</button></p>
+        </form>
+
+        <form id="resetForm" novalidate hidden>
+          <h3 class="login__title">نسيت كلمة السر</h3>
+          <p class="auth-text">اكتب إيميل حسابك، ونرسل لك رابط تغيّر بيه كلمة السر.</p>
+          <div class="login__content">
+            <div class="login__box">
+              <svg class="login__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+              <div class="login__box-input"><input type="email" required class="login__input latin" id="reset-email" placeholder=" " autocomplete="email" maxlength="120"><label for="reset-email" class="login__label">الإيميل</label></div>
+            </div>
+          </div>
+          <p class="login__error" id="resetError" role="alert"></p>
+          <button type="submit" class="login__button">أرسل رابط تغيير كلمة السر</button>
+          <p class="login__register"><button type="button" class="link-btn" data-go="loginForm">رجوع لتسجيل الدخول</button></p>
+        </form>
+
+        <form id="newPassForm" novalidate hidden>
+          <h3 class="login__title">كلمة سر جديدة</h3>
+          <div class="login__content">
+            <div class="login__box">
+              <svg class="login__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+              <div class="login__box-input"><input type="password" required class="login__input latin pass" id="new-pass" placeholder=" " autocomplete="new-password" minlength="8"><label for="new-pass" class="login__label">كلمة السر الجديدة (8 أحرف أو أكثر)</label><button type="button" class="login__eye" data-eye="new-pass" aria-label="اظهر كلمة السر"></button></div>
+            </div>
+            <div class="login__box">
+              <svg class="login__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/><path d="m9 16 2 2 4-4"/></svg>
+              <div class="login__box-input"><input type="password" required class="login__input latin pass" id="new-pass2" placeholder=" " autocomplete="new-password"><label for="new-pass2" class="login__label">أعد كلمة السر</label></div>
+            </div>
+          </div>
+          <p class="login__error" id="newPassError" role="alert"></p>
+          <button type="submit" class="login__button">احفظ كلمة السر</button>
+          <p class="login__register"><button type="button" class="link-btn" id="newPassCancel">إلغاء</button></p>
+        </form>
+
+        <div id="verifyBox" hidden>
+          <h3 class="login__title">أكّد إيميلك</h3>
+          <p class="auth-text">دزّينا رابط تأكيد على <b class="latin" id="verifyEmail"></b>. افتح الإيميل واضغط الرابط، ويفتحلك الموقع وانت داخل لحسابك. إذا ما لگيته، شوف البريد المزعج (Spam).</p>
+          <p class="login__error" id="verifyError" role="alert"></p>
+          <button type="button" class="login__button" data-go="loginForm">رجوع لتسجيل الدخول</button>
+          <p class="login__register">
+            <button type="button" class="link-btn" id="verifyResend">أرسل الرابط مرة ثانية</button>
+          </p>
+        </div>
+      </div>
+      <p class="login__foot">تگدر تطلب بدون حساب عادي. الحساب يحفظ سلتك وعنوانك.</p>
+    </div>
+  </div>
+</aside>
+
+<div class="toast" id="toast" role="status" hidden><span id="toastMsg"></span><button id="toastAction" type="button">شوف السلة</button></div>
+
+<script src="supabase-config.js"></script>
+<script>
+(function () {
+  document.documentElement.lang = "ar"; document.documentElement.dir = "rtl";
+  var WA = "9647700000000";
+  var cats = [
+    { id: "jackets", name: "جاكيتات", tint: "t1" },
+    { id: "tracksuits", name: "تراك سوت", tint: "t4" },
+    { id: "shoes", name: "حذاء", tint: "t2" },
+    { id: "shirts", name: "قميص", tint: "t1" },
+    { id: "pants", name: "بنطرون", tint: "t3" },
+    { id: "casual", name: "كاجول", tint: "t2" },
+    { id: "suits", name: "بدلات", tint: "t3" }
+  ];
+  var catById = {};
+  cats.forEach(function (c) { catById[c.id] = c; });
+
+  var products = [
+    { id: "j1", cat: "jackets", name: "جاكيت شتوي مبطّن", price: 85000, shape: "g-jacket", sizes: ["M","L","XL","2XL"], isNew: true },
+    { id: "j2", cat: "jackets", name: "جاكيت جلد كلاسيك", price: 110000, shape: "g-jacket", sizes: ["M","L","XL"] },
+    { id: "t1", cat: "tracksuits", name: "تراك سوت قطن كامل", price: 60000, shape: "g-hoodie", sizes: ["M","L","XL","2XL"], isNew: true },
+    { id: "t2", cat: "tracksuits", name: "تراك سوت رياضي خفيف", price: 48000, shape: "g-jacket", sizes: ["S","M","L","XL"] },
+    { id: "s1", cat: "shoes", name: "حذاء رياضي أبيض", price: 55000, shape: "g-shoe", sizes: ["40","41","42","43","44"] },
+    { id: "s2", cat: "shoes", name: "حذاء كلاسيك جلد", price: 70000, shape: "g-shoe", sizes: ["40","41","42","43","44","45"], isNew: true },
+    { id: "h1", cat: "shirts", name: "قميص كتان أبيض", price: 45000, shape: "g-shirt", sizes: ["M","L","XL"] },
+    { id: "h2", cat: "shirts", name: "قميص رسمي سماوي", price: 35000, shape: "g-shirt", sizes: ["S","M","L","XL","2XL"] },
+    { id: "p1", cat: "pants", name: "بنطرون جينز سليم", price: 38000, shape: "g-pants", sizes: ["30","32","34","36"] },
+    { id: "p2", cat: "pants", name: "بنطرون قماش رسمي", price: 32000, shape: "g-pants", sizes: ["30","32","34","36","38"] },
+    { id: "c1", cat: "casual", name: "تيشيرت قطن أوفر سايز", price: 22000, shape: "g-tee", sizes: ["M","L","XL"], isNew: true },
+    { id: "c2", cat: "casual", name: "هودي كاجول", price: 40000, shape: "g-hoodie", sizes: ["M","L","XL","2XL"] },
+    { id: "b1", cat: "suits", name: "بدلة رسمية كحلي", price: 175000, shape: "g-suit", sizes: ["48","50","52","54"] },
+    { id: "b2", cat: "suits", name: "بدلة رمادي سليم فت", price: 160000, shape: "g-suit", sizes: ["46","48","50","52"], isNew: true }
+  ];
+  var byId = {};
+  products.forEach(function (p) { byId[p.id] = p; });
+
+  var fmt = new Intl.NumberFormat("en-US");
+  var $ = function (id) { return document.getElementById(id); };
+  function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
+
+  /* Cart state: [{id, size, qty}] — remembered in this browser only */
+  var cart = [];
+  try { var saved = JSON.parse(localStorage.getItem("fit-cart") || "[]"); if (Array.isArray(saved)) cart = saved.filter(function (l) { return byId[l.id]; }); } catch (e) {}
+  var syncFn = null;
+  function saveLocal() { try { localStorage.setItem("fit-cart", JSON.stringify(cart)); } catch (e) {} }
+  function save() { saveLocal(); if (syncFn) syncFn(); }
+
+  /* Filters */
+  var currentCat = "all";
+  var filters = $("filters");
+  filters.innerHTML = '<button class="chip" id="f-all" data-cat="all" aria-pressed="true">الكل</button>' +
+    cats.map(function (c) { return '<button class="chip" id="f-' + c.id + '" data-cat="' + c.id + '" aria-pressed="false">' + c.name + '</button>'; }).join("");
+  filters.addEventListener("click", function (e) {
+    var b = e.target.closest(".chip"); if (!b) return;
+    currentCat = b.dataset.cat;
+    filters.querySelectorAll(".chip").forEach(function (x) { x.setAttribute("aria-pressed", x === b ? "true" : "false"); });
+    renderGrid();
+  });
+
+  /* Product grid */
+  var grid = $("grid");
+  var picked = {};
+  function renderGrid() {
+    grid.innerHTML = products.filter(function (p) { return currentCat === "all" || p.cat === currentCat; }).map(function (p) {
+      var c = catById[p.cat];
+      return '<article class="card" data-id="' + p.id + '">' +
+        '<div class="ph ' + c.tint + '"><span class="tag">' + c.name + '</span>' +
+        (p.isNew ? '<span class="new">NEW</span>' : '') +
+        '<svg viewBox="0 0 100 100" role="img" aria-label="صورة توضيحية: ' + esc(p.name) + '"><use href="#' + p.shape + '"/></svg></div>' +
+        '<div class="card-body"><h3>' + esc(p.name) + '</h3>' +
+        '<div class="size-label">القياس</div>' +
+        '<div class="sizes" role="group" aria-label="اختار القياس">' + p.sizes.map(function (s) {
+          return '<button type="button" data-size="' + s + '" aria-pressed="' + (picked[p.id] === s) + '">' + s + '</button>';
+        }).join("") + '</div>' +
+        '<div class="card-foot"><span class="price latin">' + fmt.format(p.price) + '<small>د.ع</small></span>' +
+        '<button type="button" class="btn btn-primary add">أضف للسلة</button></div>' +
+        '</div></article>';
+    }).join("");
+  }
+  grid.addEventListener("click", function (e) {
+    var card = e.target.closest(".card"); if (!card) return;
+    var id = card.dataset.id;
+    var sb = e.target.closest(".sizes button");
+    if (sb) {
+      picked[id] = sb.dataset.size;
+      card.querySelectorAll(".sizes button").forEach(function (x) { x.setAttribute("aria-pressed", x === sb ? "true" : "false"); });
+      var lbl = card.querySelector(".size-label"); lbl.textContent = "القياس"; lbl.classList.remove("warn");
+      return;
+    }
+    if (e.target.closest(".add")) {
+      var size = picked[id];
+      if (!size) {
+        var l = card.querySelector(".size-label"); l.textContent = "اختار القياس أول"; l.classList.add("warn");
+        return;
+      }
+      addToCart(id, size);
+    }
+  });
+
+  function addToCart(id, size) {
+    var line = cart.filter(function (l) { return l.id === id && l.size === size; })[0];
+    if (line) line.qty += 1; else cart.push({ id: id, size: size, qty: 1 });
+    save(); renderCart();
+    toast("انضافت «" + byId[id].name + "» قياس " + size);
+  }
+
+  /* Cart drawer */
+  function totals() {
+    var n = 0, sum = 0;
+    cart.forEach(function (l) { n += l.qty; sum += l.qty * byId[l.id].price; });
+    return { n: n, sum: sum };
+  }
+  function orderText() {
+    var t = totals();
+    var rows = cart.map(function (l, i) {
+      var p = byId[l.id];
+      return (i + 1) + ") " + p.name + " | قياس " + l.size + " | العدد " + l.qty + " | " + fmt.format(p.price * l.qty) + " د.ع";
+    });
+    var name = $("custName").value.trim(), addr = $("custAddr").value.trim();
+    var msg = "هلو وكالة فت، أريد أأكد هذا الطلب:\n" + rows.join("\n") +
+      "\n\nالمجموع: " + fmt.format(t.sum) + " د.ع (" + t.n + " قطعة)";
+    if (name) msg += "\nالاسم: " + name;
+    if (currentUser && currentUser.email) msg +="\nالإيميل: " + currentUser.email;
+    if (addr) msg += "\nالعنوان: " + addr;
+    return msg;
+  }
+  function updateLink() {
+    var empty = cart.length === 0;
+    var btn = $("confirmBtn");
+    btn.href = empty ? "#" : "https://wa.me/" + WA + "?text=" + encodeURIComponent(orderText());
+    btn.setAttribute("aria-disabled", empty ? "true" : "false");
+  }
+  function renderCart() {
+    var t = totals();
+    $("cartCount").textContent = t.n;
+    $("totalVal").textContent = fmt.format(t.sum);
+    $("itemsLabel").textContent = t.n ? "(" + t.n + " قطعة)" : "";
+    var empty = cart.length === 0;
+    $("fields").hidden = empty;
+    $("foot").hidden = empty;
+    if (empty) $("sentBox").hidden = true;
+    $("lines").innerHTML = empty
+      ? '<div class="empty"><div>السلة فارغة. اختار قطعة وقياسها وضيفها من الأقسام.</div><a class="btn btn-ghost btn-small" href="#products" id="browseLink">تصفّح الأقسام</a></div>'
+      : cart.map(function (l, i) {
+          var p = byId[l.id], c = catById[p.cat];
+          return '<div class="line" data-i="' + i + '">' +
+            '<div class="thumb ph ' + c.tint + '"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#' + p.shape + '"/></svg></div>' +
+            '<div class="meta"><b>' + esc(p.name) + '</b><span>' + c.name + ' · قياس <span class="latin">' + l.size + '</span></span>' +
+            '<span class="lp latin">' + fmt.format(p.price * l.qty) + ' <small>د.ع</small></span></div>' +
+            '<div class="qty"><button type="button" data-act="dec" aria-label="نقّص">−</button><output>' + l.qty + '</output><button type="button" data-act="inc" aria-label="زيد">+</button></div>' +
+            '<button type="button" class="remove" data-act="rm">احذف من السلة</button></div>';
+        }).join("");
+    updateLink();
+  }
+  $("lines").addEventListener("click", function (e) {
+    if (e.target.closest("#browseLink")) { closeCart(); return; }
+    var b = e.target.closest("[data-act]"); if (!b) return;
+    var i = +b.closest(".line").dataset.i, act = b.dataset.act;
+    if (act === "inc") cart[i].qty += 1;
+    if (act === "dec") { cart[i].qty -= 1; if (cart[i].qty < 1) cart.splice(i, 1); }
+    if (act === "rm") cart.splice(i, 1);
+    save(); renderCart();
+  });
+  $("custName").addEventListener("input", updateLink);
+  $("custAddr").addEventListener("input", updateLink);
+
+  $("confirmBtn").addEventListener("click", function (e) {
+    if (!cart.length) { e.preventDefault(); return; }
+    updateLink();
+    $("sentBox").hidden = false;
+  });
+  $("clearCart").addEventListener("click", function () { cart = []; save(); renderCart(); toast("فرّغنا السلة. شكراً لطلبك!", true); });
+  $("copyOrder").addEventListener("click", function () {
+    var b = this, text = orderText();
+    try { navigator.clipboard.writeText(text).then(function () { b.textContent = "انتسخ"; }, function () { b.textContent = "ما انتسخ"; }); } catch (err) { b.textContent = "ما انتسخ"; }
+  });
+
+  var lastFocus = null, openPanel = null;
+  function showPanel(id, focusId) {
+    if (openPanel) $(openPanel).hidden = true;
+    lastFocus = document.activeElement; openPanel = id;
+    $("scrim").hidden = false; $(id).hidden = false; document.body.classList.add("locked");
+    $(focusId).focus();
+  }
+  function closePanel() {
+    if (!openPanel) return;
+    $("scrim").hidden = true; $(openPanel).hidden = true; openPanel = null; document.body.classList.remove("locked");
+    if (lastFocus) lastFocus.focus();
+  }
+  function openCart() { showPanel("drawer", "closeCart"); }
+  var closeCart = closePanel;
+  $("openCart").addEventListener("click", openCart);
+  $("closeCart").addEventListener("click", closePanel);
+  $("openAcct").addEventListener("click", function () { showPanel("acct", "closeAcct"); });
+  $("closeAcct").addEventListener("click", closePanel);
+  $("scrim").addEventListener("click", closePanel);
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape") closePanel(); });
+
+  /* Accounts: Supabase Auth (email + password, confirmation email, password reset)
+     and one row per customer in public.customers (cart + profile), locked by row-level security.
+     Config comes from supabase-config.js; without it there is no login button and the shop runs as guest checkout. */
+  var SB_SRC = "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js";
+  var cfg = window.FIT_SUPABASE;
+  var sb = null, currentUser = null, recovering = false, pendingLinkError = "";
+  var acctProfile = { name: "", addr: "" };
+  var writing = false, dirty = false, syncTimer = null, loaded = false;
+  function setStatus(t) { $("acctStatus").textContent = t; }
+  function validLine(l) { return l && byId[l.id] && typeof l.size === "string" && byId[l.id].sizes.indexOf(l.size) > -1 && l.qty >= 1 && l.qty <= 99 && Math.floor(l.qty) === l.qty; }
+  function copyLine(l) { return { id: l.id, size: l.size, qty: l.qty }; }
+  function hasAccountHere() { try { return localStorage.getItem("fit-has-account") === "1"; } catch (e) { return false; } }
+  function markAccountHere() { try { localStorage.setItem("fit-has-account", "1"); } catch (e) {} }
+
+  syncFn = function () {
+    if (!sb || !currentUser || !loaded) return;
+    clearTimeout(syncTimer);
+    syncTimer = setTimeout(pushRemote, 700);
+  };
+  function pushRemote() {
+    if (!sb || !currentUser) return;
+    if (writing) { dirty = true; return; }
+    writing = true; setStatus("جاري الحفظ…");
+    sb.from("customers").upsert({ id: currentUser.id, name: acctProfile.name, addr: acctProfile.addr, cart: cart.map(copyLine), updated_at: new Date().toISOString() })
+      .then(function (r) { setStatus(r.error ? "ما انحفظ هسه. راح ينحفظ بأول تعديل جاي." : "انحفظ بحسابك"); })
+      .then(function () { writing = false; if (dirty) { dirty = false; pushRemote(); } });
+  }
+  function loadRemote() {
+    setStatus("جاري تحميل حسابك…");
+    return sb.from("customers").select("name, addr, cart").eq("id", currentUser.id).maybeSingle().then(function (r) {
+      if (r.error) { setStatus("ما گدرنا نوصل لحسابك. سلتك محفوظة بهذا الجهاز."); return; }
+      var d = r.data;
+      var merged = (d && Array.isArray(d.cart) ? d.cart.filter(validLine) : []).map(copyLine);
+      var localCount = cart.length;
+      cart.forEach(function (l) {
+        var m = merged.filter(function (x) { return x.id === l.id && x.size === l.size; })[0];
+        if (m) m.qty = Math.max(m.qty, l.qty); else merged.push(copyLine(l));
+      });
+      cart = merged;
+      var meta = currentUser.user_metadata || {};
+      acctProfile = { name: String((d && d.name) || meta.name || ""), addr: String((d && d.addr) || "") };
+      loaded = true;
+      fillProfile(); saveLocal(); renderAcct(); renderCart();
+      setStatus(d ? "سلتك وعنوانك محمّلة من حسابك" : "حسابك جاهز. أي شي تضيفه ينحفظ.");
+      if (!d || localCount) pushRemote();
+    });
+  }
+
+  /* Views inside the login card */
+  var views = ["regForm", "loginForm", "resetForm", "newPassForm", "verifyBox"];
+  function showView(v) {
+    views.forEach(function (id) { $(id).hidden = id !== v; });
+    $("authTabs").hidden = v !== "regForm" && v !== "loginForm";
+    $("tab-reg").setAttribute("aria-selected", v === "regForm" ? "true" : "false");
+    $("tab-login").setAttribute("aria-selected", v === "loginForm" ? "true" : "false");
+    ["regError", "loginError", "resetError", "newPassError", "verifyError"].forEach(function (id) { $(id).textContent = ""; $(id).classList.remove("ok"); });
+  }
+  $("acctOut").addEventListener("click", function (e) {
+    var t = e.target.closest("[data-view],[data-go]"); if (!t) return;
+    var v = t.dataset.view || t.dataset.go;
+    showView(v);
+    if (v === "resetForm") $("reset-email").value = $("login-email").value;
+  });
+
+  /* Show/hide password — adapted from the template's showHiddenPass() */
+  document.querySelectorAll("[data-eye]").forEach(function (eye) {
+    var input = $(eye.dataset.eye);
+    eye.addEventListener("click", function () {
+      var show = input.type === "password";
+      input.type = show ? "text" : "password";
+      eye.classList.toggle("on", show);
+      eye.setAttribute("aria-label", show ? "اخفي كلمة السر" : "اظهر كلمة السر");
+    });
+  });
+
+  function errMsg(err) {
+    var c = (err && err.code) || "", m = String((err && err.message) || "").toLowerCase();
+    if (c === "invalid_credentials" || m.indexOf("invalid login credentials") > -1) return "الإيميل أو كلمة السر غلط.";
+    if (c === "email_not_confirmed" || m.indexOf("email not confirmed") > -1) return "بعدك ما أكدت إيميلك. افتح رابط التأكيد اللي وصلك.";
+    if (c === "user_already_exists" || m.indexOf("already registered") > -1) return "هذا الإيميل عنده حساب. سجّل دخول بداله.";
+    if (c === "weak_password" || m.indexOf("password should") > -1) return "كلمة السر ضعيفة. خليها 8 أحرف أو أكثر.";
+    if (c === "same_password" || m.indexOf("different from the old") > -1) return "اختار كلمة سر غير القديمة.";
+    if (c === "email_address_invalid" || m.indexOf("invalid") > -1 && m.indexOf("email") > -1) return "الإيميل مو صحيح.";
+    if (c.indexOf("rate_limit") > -1 || m.indexOf("rate limit") > -1 || m.indexOf("security purposes") > -1) return "محاولات هواية. انتظر كم دقيقة وحاول مرة ثانية.";
+    if (m.indexOf("failed to fetch") > -1 || m.indexOf("network") > -1) return "ماكو اتصال بالإنترنت. تأكد من الشبكة وحاول مرة ثانية.";
+    if (m.indexOf("invalid api key") > -1 || m.indexOf("no api key") > -1) return "نظام الحسابات مو مضبوط بعد. راسلنا عالواتساب.";
+    return "صار خطأ، حاول مرة ثانية.";
+  }
+  var EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+  function busy(form, on) { var b = form.querySelector("[type=submit]"); if (b) { b.disabled = on; b.style.opacity = on ? ".6" : ""; } }
+  function siteUrl() { return location.origin + location.pathname; }
+
+  $("regForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+    var err = $("regError"), name = $("reg-name").value.trim(), email = $("reg-email").value.trim(), p1 = $("reg-pass").value, p2 = $("reg-pass2").value;
+    if (!sb) { err.textContent = "الحسابات مو مفعّلة بهاي النسخة من الموقع."; return; }
+    if (!name) { err.textContent = "اكتب اسمك."; $("reg-name").focus(); return; }
+    if (!EMAIL_RE.test(email)) { err.textContent = "الإيميل مو صحيح."; $("reg-email").focus(); return; }
+    if (p1.length < 8) { err.textContent = "كلمة السر لازم 8 أحرف أو أكثر."; $("reg-pass").focus(); return; }
+    if (p1 !== p2) { err.textContent = "كلمتين السر مو متطابقات."; $("reg-pass2").focus(); return; }
+    err.textContent = ""; busy(this, true); var form = this;
+    sb.auth.signUp({ email: email, password: p1, options: { data: { name: name.slice(0, 60) }, emailRedirectTo: siteUrl() } })
+      .then(function (r) {
+        if (r.error) { err.textContent = errMsg(r.error); return; }
+        /* An already-registered email comes back as a user with no identities */
+        if (r.data.user && Array.isArray(r.data.user.identities) && r.data.user.identities.length === 0) { err.textContent = errMsg({ code: "user_already_exists" }); return; }
+        markAccountHere();
+        $("reg-pass").value = ""; $("reg-pass2").value = "";
+        $("login-email").value = email;
+        if (r.data.session) return; /* confirmation switched off in Supabase: already signed in */
+        $("verifyEmail").textContent = email; showView("verifyBox");
+      })
+      .catch(function (e2) { err.textContent = errMsg(e2); })
+      .then(function () { busy(form, false); });
+  });
+
+  $("verifyResend").addEventListener("click", function () {
+    var el = $("verifyError"), email = $("verifyEmail").textContent;
+    if (!sb || !email) return;
+    sb.auth.resend({ type: "signup", email: email, options: { emailRedirectTo: siteUrl() } }).then(function (r) {
+      if (r.error) { el.textContent = errMsg(r.error); el.classList.remove("ok"); }
+      else { el.textContent = "دزّينا الرابط مرة ثانية."; el.classList.add("ok"); }
+    });
+  });
+
+  $("loginForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+    var err = $("loginError"), email = $("login-email").value.trim(), pass = $("login-pass").value;
+    if (!sb) { err.textContent = "الحسابات مو مفعّلة بهاي النسخة من الموقع."; return; }
+    if (!EMAIL_RE.test(email)) { err.textContent = "الإيميل مو صحيح."; $("login-email").focus(); return; }
+    if (!pass) { err.textContent = "اكتب كلمة السر."; $("login-pass").focus(); return; }
+    err.textContent = ""; busy(this, true); var form = this;
+    sb.auth.signInWithPassword({ email: email, password: pass })
+      .then(function (r) {
+        if (!r.error) { markAccountHere(); $("login-pass").value = ""; return; }
+        var msg = errMsg(r.error);
+        if (msg.indexOf("ما أكدت") > -1) { $("verifyEmail").textContent = email; showView("verifyBox"); $("verifyError").textContent = msg; return; }
+        err.textContent = msg;
+      })
+      .catch(function (e2) { err.textContent = errMsg(e2); })
+      .then(function () { busy(form, false); });
+  });
+
+  $("resetForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+    var err = $("resetError"), email = $("reset-email").value.trim();
+    if (!sb) { err.textContent = "الحسابات مو مفعّلة بهاي النسخة من الموقع."; return; }
+    if (!EMAIL_RE.test(email)) { err.textContent = "الإيميل مو صحيح."; $("reset-email").focus(); return; }
+    busy(this, true); var form = this;
+    sb.auth.resetPasswordForEmail(email, { redirectTo: siteUrl() })
+      .then(function (r) {
+        if (r.error && errMsg(r.error).indexOf("محاولات") > -1) { err.textContent = errMsg(r.error); err.classList.remove("ok"); return; }
+        err.textContent = "إذا هذا الإيميل عنده حساب، راح يوصله رابط تغيير كلمة السر خلال دقايق. شوف البريد المزعج (Spam) هم.";
+        err.classList.add("ok");
+      })
+      .catch(function (e2) { err.textContent = errMsg(e2); })
+      .then(function () { busy(form, false); });
+  });
+
+  /* New password: after opening the reset link (PASSWORD_RECOVERY), or from «غيّر كلمة السر» while signed in */
+  function startNewPassword() { recovering = true; renderAcct(); showView("newPassForm"); showPanel("acct", "new-pass"); }
+  $("newPassForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+    var err = $("newPassError"), p1 = $("new-pass").value, p2 = $("new-pass2").value;
+    if (p1.length < 8) { err.textContent = "كلمة السر لازم 8 أحرف أو أكثر."; $("new-pass").focus(); return; }
+    if (p1 !== p2) { err.textContent = "كلمتين السر مو متطابقات."; $("new-pass2").focus(); return; }
+    busy(this, true); var form = this;
+    sb.auth.updateUser({ password: p1 })
+      .then(function (r) {
+        if (r.error) { err.textContent = errMsg(r.error); return; }
+        $("new-pass").value = ""; $("new-pass2").value = "";
+        recovering = false; renderAcct(); setStatus("تغيّرت كلمة السر.");
+        toast("تغيّرت كلمة السر", true);
+      })
+      .catch(function (e2) { err.textContent = errMsg(e2); })
+      .then(function () { busy(form, false); });
+  });
+  $("newPassCancel").addEventListener("click", function () { recovering = false; renderAcct(); });
+  $("changePassBtn").addEventListener("click", function () { if (currentUser) startNewPassword(); });
+
+  $("logoutBtn").addEventListener("click", function () {
+    if (!sb) return;
+    clearTimeout(syncTimer);
+    var finish = function () { cart = []; saveLocal(); renderCart(); $("custName").value = ""; $("custAddr").value = ""; toast("سجّلت خروج", true); };
+    sb.auth.signOut().then(finish, finish);
+  });
+
+  function fillProfile() {
+    $("pName").value = acctProfile.name; $("pAddr").value = acctProfile.addr;
+    if (!$("custName").value) $("custName").value = acctProfile.name;
+    if (!$("custAddr").value) $("custAddr").value = acctProfile.addr;
+    updateLink();
+  }
+  [["pName", "name"], ["pAddr", "addr"]].forEach(function (f) {
+    $(f[0]).addEventListener("input", function () {
+      acctProfile[f[1]] = this.value.slice(0, 300);
+      if (f[1] === "name") $("custName").value = this.value;
+      if (f[1] === "addr") $("custAddr").value = this.value;
+      updateLink(); syncFn();
+    });
+  });
+  $("pName").addEventListener("change", renderAcct);
+
+  function renderAcct() {
+    var on = !!currentUser && !recovering;
+    $("acctIn").hidden = !on; $("acctOut").hidden = on;
+    $("acctTitle").textContent = recovering ? "كلمة السر" : (on ? "حسابي" : "حسابك");
+    $("acctLabel").textContent = currentUser ? ((acctProfile.name || "").split(" ")[0] || "حسابي") : "تسجيل الدخول";
+    if (currentUser) {
+      $("acctName").textContent = "هلا " + (acctProfile.name || "بيك");
+      $("acctEmail").textContent = currentUser.email || "";
+      $("acctInitial").textContent = (acctProfile.name || currentUser.email || "F").trim().charAt(0).toUpperCase();
+    }
+  }
+
+  function onSession(event, session) {
+    var u = session ? session.user : null;
+    var changed = (u && u.id) !== (currentUser && currentUser.id);
+    currentUser = u;
+    if (event === "PASSWORD_RECOVERY" && u) { startNewPassword(); }
+    if (!u) {
+      loaded = false; recovering = false; acctProfile = { name: "", addr: "" };
+      showView(pendingLinkError || hasAccountHere() ? "loginForm" : "regForm");
+      if (pendingLinkError) { $("loginError").textContent = pendingLinkError; pendingLinkError = ""; }
+      renderAcct(); return;
+    }
+    if (changed) {
+      markAccountHere();
+      acctProfile.name = (u.user_metadata && u.user_metadata.name) || acctProfile.name;
+      renderAcct();
+      if (event === "SIGNED_IN" && openPanel !== "acct" && !recovering) toast("هلا " + (acctProfile.name || "بيك") + "، انت داخل لحسابك", true);
+      /* Supabase asks not to await other calls inside the auth callback */
+      setTimeout(loadRemote, 0);
+    } else renderAcct();
+  }
+
+  function loadScript(src) {
+    return new Promise(function (res, rej) { var s = document.createElement("script"); s.src = src; s.onload = res; s.onerror = rej; document.head.appendChild(s); });
+  }
+  showView(hasAccountHere() ? "loginForm" : "regForm");
+  renderAcct();
+  /* No Supabase here (claude.ai preview, or config not filled in yet): no login button at all,
+     the shop works as guest checkout. */
+  if (!cfg || !cfg.url || !cfg.anonKey) {
+    $("openAcct").hidden = true;
+  } else {
+    loadScript(SB_SRC)
+      .then(function () {
+        sb = window.supabase.createClient(cfg.url, cfg.anonKey, { auth: { persistSession: true, detectSessionInUrl: true, flowType: "implicit" } });
+        sb.auth.onAuthStateChange(onSession);
+        /* Came back from a confirmation or reset link that failed (expired or already used) */
+        var h = new URLSearchParams(location.hash.slice(1));
+        if (h.get("error")) {
+          var expired = (h.get("error_code") || "").indexOf("expired") > -1;
+          history.replaceState(null, "", siteUrl());
+          showView("loginForm"); showPanel("acct", "closeAcct");
+          setTimeout(function () { pendingLinkError = ""; }, 4000);
+          $("loginError").textContent = pendingLinkError = expired ? "الرابط انتهت صلاحيته. سجّل دخول، أو اطلب رابط جديد من «نسيت كلمة السر»." : "الرابط مو صالح. جرّب مرة ثانية.";
+        }
+      })
+      .catch(function () { $("openAcct").hidden = true; if (openPanel === "acct") closePanel(); });
+  }
+
+  var toastTimer;
+  function toast(msg, noAction) {
+    $("toastMsg").textContent = msg;
+    $("toastAction").hidden = !!noAction;
+    $("toast").hidden = false;
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function () { $("toast").hidden = true; }, 2600);
+  }
+  $("toastAction").addEventListener("click", function () { $("toast").hidden = true; openCart(); });
+
+  renderGrid();
+  renderCart();
+
+  var s = "";
+  for (var i = 0; i < 60; i++) s += "<span>" + i + "</span>";
+  $("tapeNums").innerHTML = s;
+
+  var copyBtn = $("copyWa");
+  copyBtn.addEventListener("click", function () {
+    var text = $("waNum").textContent;
+    function done() { copyBtn.textContent = "انتسخ"; setTimeout(function () { copyBtn.textContent = "انسخ الرقم"; }, 1800); }
+    function fallback() { var r = document.createRange(); r.selectNodeContents($("waNum")); var sel = getSelection(); sel.removeAllRanges(); sel.addRange(r); copyBtn.textContent = "حدّد الرقم وانسخه"; }
+    try { navigator.clipboard.writeText(text).then(done, fallback); } catch (e) { fallback(); }
+  });
+})();
+</script>
+
+</body></html>
